@@ -33,18 +33,18 @@ import datetime
 
 ## Data
 
-We need to get data using pandas datareader. We will get stock information for the following banks:
-    *  Bank of America
-               * CitiGroup
-               * Goldman Sachs
-                         * JPMorgan Chase
-                                    * Morgan Stanley
-                                             * Wells Fargo
+# We need to get data using pandas datareader. We will get stock information for the following banks:
+#     *  Bank of America
+#                * CitiGroup
+#                * Goldman Sachs
+#                          * JPMorgan Chase
+#                                     * Morgan Stanley
+#                                              * Wells Fargo
 
-                                                     **get the stock data from Jan 1st 2006 to Jan 1st 2016 for each of these banks. Set each bank to be a separate dataframe, with the variable name for that bank being its ticker symbol. This will involve a few steps:**
-1. Use datetime to set start and end datetime objects.
-2. Figure out the ticker symbol for each bank.
-2. Figure out how to use datareader to grab info on the stock.
+#                                                      **get the stock data from Jan 1st 2006 to Jan 1st 2016 for each of these banks. Set each bank to be a separate dataframe, with the variable name for that bank being its ticker symbol. This will involve a few steps:**
+# 1. Use datetime to set start and end datetime objects.
+# 2. Figure out the ticker symbol for each bank.
+# 2. Figure out how to use datareader to grab info on the stock.
 
 # Bank of America
 BAC = data.DataReader("BAC", 'google', start, end)
@@ -84,7 +84,7 @@ GS
 
 #%% md
 
-** Create a list of the ticker symbols (as strings) in alphabetical order. Let's Call this list: tickers**
+# ** Create a list of the ticker symbols (as strings) in alphabetical order. Let's Call this list: tickers**
 
 #%%
 
@@ -92,7 +92,7 @@ tickers = ['BAC', 'C', 'GS', 'JPM','MS','WFC']
 
 #%% md
 
-**Use pd.concat to concatenate the bank dataframes together to a single data frame called bank_stocks. Set the keys argument equal to the tickers list. Creating on column.**
+# **Use pd.concat to concatenate the bank dataframes together to a single data frame called bank_stocks. Set the keys argument equal to the tickers list. Creating on column.**
 
 #%%
 
@@ -112,7 +112,7 @@ bank_stocks.columns.names = ['Bank Ticker','Stock Info']
 
 #%% md
 
-**Check the head of the bank_stocks dataframe.**
+# **Check the head of the bank_stocks dataframe.**
 
 #%%
 
